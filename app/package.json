@@ -1,0 +1,14 @@
+{
+  "name": "fine-print-translator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Zero-login Fine Print Translator — upload a PDF or photo, get a three-part plain-language summary.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

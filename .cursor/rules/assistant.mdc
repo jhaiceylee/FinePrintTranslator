@@ -1,0 +1,12 @@
+---
+description: Read the assistant memory before changing the application, and keep the session note current.
+alwaysApply: true
+---
+
+# Assistant memory
+
+At the start of a session, read `assistant/documents-included.md`, `assistant/00-last-session.md`, and `00-where-we-are.md` before writing code. The included list is the reminder: update every chosen document that this session's work belongs in.
+
+The assistant records which files changed. It does not decide scope, claims, or signatures.
+
+When a change alters a rule, a screen, or a claim, update `phase-4/04-decisions.md` and `00-where-we-are.md` in the same session. Leave every acceptance table unsigned.

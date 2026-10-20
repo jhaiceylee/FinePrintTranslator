@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      { "command": "node .cursor/hooks/remember.mjs sessionStart", "timeout": 15 }
+    ],
+    "afterFileEdit": [
+      { "command": "node .cursor/hooks/remember.mjs afterFileEdit", "timeout": 15 }
+    ],
+    "stop": [
+      { "command": "node .cursor/hooks/remember.mjs stop", "timeout": 15 }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fine Print Translator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <main class="shell">
+      <header class="brand-block">
+        <p class="brand">Fine Print Translator</p>
+        <h1>What do you actually have to do — and by when?</h1>
+        <p class="lede">
+          Drop a PDF or photo of dense fine print. Get three plain-language parts. Free. No account.
+          You keep the copy on your device.
+        </p>
+      </header>
+
+      <section class="work" aria-labelledby="upload-heading">
+        <h2 id="upload-heading" class="visually-hidden">Upload</h2>
+        <form id="translate-form" class="upload-form">
+          <label class="drop" id="drop-zone" for="file-input">
+            <span class="drop-title">Drop a PDF or photo here</span>
+            <span class="drop-hint">or click to choose · JPEG, PNG, WebP, GIF, PDF · under ~12 MB</span>
+            <span class="file-name" id="file-name" hidden></span>
+          </label>
+          <input
+            id="file-input"
+            name="file"
+            type="file"
+            accept="application/pdf,image/jpeg,image/png,image/webp,image/gif,.pdf,.jpg,.jpeg,.png,.webp,.gif"
+            required
+          />
+          <button type="submit" class="primary" id="submit-btn" disabled>Translate fine print</button>
+        </form>
+
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+
+        <article class="result" id="result" hidden>
+          <p class="disclaimer" id="disclaimer"></p>
+          <section>
+            <h2>1. What this document is</h2>
+            <p id="what-it-is"></p>
+          </section>
+          <section>
+            <h2>2. Actions required of you</h2>
+            <ul id="actions"></ul>
+          </section>
+          <section>
+            <h2>3. Traps, fees, or deadlines</h2>
+            <ul id="traps"></ul>
+          </section>
+          <div class="actions-row">
+            <button type="button" class="secondary" id="download-btn">Download as text</button>
+            <button type="button" class="secondary" id="print-btn">Print</button>
+          </div>
+        </article>
+      </section>
+
+      <footer class="foot">
+        <p>
+          Not medical, legal, or money advice. Always check the original. Files are sent only to
+          translate this session and are not kept as an account history.
+        </p>
+      </footer>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
