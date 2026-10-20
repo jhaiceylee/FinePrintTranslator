@@ -16,6 +16,7 @@ Facts the code and the record already agree on. One line each. Cite a requiremen
 - Runnable app under `app/`: SCR-01 upload page, `POST /api/translate` (R-03), download/print, capacity message (`D-06`).
 - AI is Gemini free tier with builder key in `GEMINI_API_KEY` only; billing off (`NFR-02`, `NFR-04`, `D-05`).
 - Unit tests for parse + capacity pass (`npm test` in `app/`).
+- Private GitHub repo: `https://github.com/jhaiceylee/FinePrintTranslator`
 - Kit leftover Project Record Assistant work is not this product.
 
 ## 2. This session
@@ -24,8 +25,7 @@ The only work the agent may do now.
 
 | Item | Requirement ids | Done when |
 | --- | --- | --- |
-| Build simple page + thin translate path | FR-01–FR-06, FR-10, FR-11, D-06 | App runs; tests pass; key only in env |
-| Push project to GitHub | — | Remote repo exists and contains this folder |
+| Set `GEMINI_API_KEY` in `app/.env` (billing off) and smoke-test translate | NFR-02, D-05, D-06 | One real PDF/photo returns three parts locally |
 
 ## 3. Do not redo
 
@@ -48,7 +48,7 @@ Choices that stay with a person. Leave blank until a person answers. The agent d
 | Stack, if it is not already in the repository | Language: JavaScript. Framework: Browser page plus a thin Node translate path for Gemini. Database: None (users save files on their device). Host: On the same computer as the application for the first build. | 2026-10-20 |
 | How free AI is provided without charging users | Google Gemini API free tier; builder's key in env only; billing off; no user key; soft capacity-full message (`D-05`) | 2026-10-20 |
 | What this release must not claim | See product reference Do not claim list | 2026-10-20 |
-| GitHub repository visibility (public or private) | | |
+| GitHub repository visibility (public or private) | Private: https://github.com/jhaiceylee/FinePrintTranslator | 2026-10-20 |
 | Who accepts the current gate | | |
 
 ## Acceptance
